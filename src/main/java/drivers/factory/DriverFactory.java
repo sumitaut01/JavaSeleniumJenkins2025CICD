@@ -27,6 +27,7 @@ public class DriverFactory {
 
             default:
                 throw new RuntimeException("Invalid environment");
+                //or think about sending local
         }
 
         DriverManager.setDriver(driver);

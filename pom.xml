@@ -201,7 +201,7 @@
         <version>3.5.3</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testngmyproject.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/java/runners/runner1.xml</suiteXmlFile>
           </suiteXmlFiles>
           <systemPropertyVariables>
 <!--            <env>${env}</env>-->

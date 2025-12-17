@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="listeners.TestListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="D:/Resurrection 2025/JavaSeleniumJenkins2025CICD/src/test/java/tests/demo">
+        <classes>
+            <class name="tests.demo.DemoTest1">
+                <methods>
+                    <include name="method1"/>
+                    <include name="method2"/>
+                </methods>
+            </class>
+            <class name="tests.demo.DemoTest2">
+                <methods>
+                    <include name="method1"/>
+                    <include name="method2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

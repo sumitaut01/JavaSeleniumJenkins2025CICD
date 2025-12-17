@@ -6,7 +6,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import reports.ExtentReportManager;
 import utils.ConfigReader;
+
+import java.lang.reflect.Method;
 
 public class BaseTest {
 
@@ -14,15 +17,17 @@ public class BaseTest {
     @BeforeSuite
     public void setUp() {
 
+        ExtentReportManager.initReports();
 
     }
 
 
     @BeforeMethod
-    public void beforeMethod() throws InterruptedException {
+    public void beforeMethod(Method m) throws InterruptedException {
         DriverFactory.initDriver(ConfigReader.readDefaultProperties());
         DriverManager.getDriver().get("http://www.rediff.com");
         Thread.sleep(5000);
+        ExtentReportManager.createTest(m.getName());
 
 
     }
@@ -38,6 +43,7 @@ public class BaseTest {
     @AfterSuite
     public void tearDown() {
 
+        ExtentReportManager.flushReports();
 
     }
 }
