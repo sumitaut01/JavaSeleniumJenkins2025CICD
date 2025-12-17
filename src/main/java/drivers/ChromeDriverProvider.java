@@ -1,0 +1,12 @@
+package drivers;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ChromeDriverProvider implements DriverProvider {
+
+    @Override
+    public WebDriver createDriver() {
+        return new ChromeDriver();
+    }
+}
