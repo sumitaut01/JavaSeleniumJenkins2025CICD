@@ -35,7 +35,7 @@ public final class Waits {
         return getWait(waitType)
                 .until(ExpectedConditions.visibilityOfElementLocated(by));
     }
-    
+
     /* ---------------- CLICKABLE ---------------- */
 
     public static WebElement waitForClickable(By by, WaitType waitType) {
