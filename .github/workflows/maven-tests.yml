@@ -35,6 +35,6 @@ jobs:
         with:
           name: selenium-test-reports
           path: |
-            path: ./**/*Extent*.html
+            path: ./LOCAL_Extent*.html
 #            ./reports
 #            ./index.html
