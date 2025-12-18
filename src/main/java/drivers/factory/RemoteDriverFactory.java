@@ -4,6 +4,7 @@ import enums.Browser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import utils.ConfigReader;
 
 import java.net.URL;
 
@@ -26,7 +27,7 @@ public class RemoteDriverFactory {
 
         try {
             return new RemoteWebDriver(
-                    new URL("http://localhost:4444/wd/hub"),
+                    new URL(ConfigReader.readDefaultProperties().getProperty("remoteurl")),
                     caps
             );
         } catch (Exception e) {
