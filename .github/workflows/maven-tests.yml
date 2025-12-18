@@ -23,18 +23,14 @@ jobs:
       - name: Install Google Chrome
         uses: browser-actions/setup-chrome@v1
 
-      - name: Verify Chrome
+      - name: Verify Chrome installation
         run: chrome --version
 
       - name: Run Maven Tests
         run: mvn clean test
 
-      # Upload ROOT-LEVEL reports
-      - name: Upload Test Reports
+      - name: Upload Extent HTML Reports (Root Level)
         uses: actions/upload-artifact@v4
         with:
           name: selenium-test-reports
-          path: |
-            path: ./LOCAL_Extent*.html
-#            ./reports
-#            ./index.html
+          path: ./LOCAL_Extent*.html
